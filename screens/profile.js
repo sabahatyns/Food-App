@@ -2,13 +2,17 @@ import { StyleSheet, Image, SafeAreaView, Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Button1 from "../components/Button1";
 import Input from "../components/Input";
+import { useState } from "react";
 
 
 
 
 
 function Profile(props ) {
-  
+  const [firstName, setFirstName] =useState(null)
+  const [latName, setLastName] =useState(null)
+  const [age, setAge] =useState(null)
+  const [address, setAddress] =useState(null)
     return (
         <SafeAreaView style={styles.container}>
 
@@ -21,7 +25,18 @@ function Profile(props ) {
                     source={require("../assets/food.png")}
                     style={styles.image}
                 />
-            <Input/>
+            <Input 
+            placeholder={'First Name'}
+            onChangeText={(t) => setFirstName(t)}            />
+            <Input 
+            placeholder={'Last Name'}
+            onChangeText={(t) => setLastName(t)}            />
+            <Input 
+            placeholder={'Age'}
+            onChangeText={(t) => setAge(t)}            />
+            <Input 
+            placeholder={'Address'}
+            onChangeText={(t) => setAddress(t)}            />
 
                 <Button1 title="Save/Update"
                     onPress={() => {}} />

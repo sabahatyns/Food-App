@@ -6,6 +6,8 @@ import Welcome from './screens/welcome';
 import Signin from './screens/signin';
 import Signup from './screens/signup';
 import { Main } from './screens/menu';
+import Profile from './screens/profile';
+
 
 
 
@@ -78,6 +80,7 @@ export default function App() {
         <Stack.Screen   name="welcome" component={Welcome} />
         <Stack.Screen name="signin" component={Signin} />
         <Stack.Screen name="signup" component={Signup} />
+        <Stack.Screen name="Profile" component={Profile} />
         {/* <Stack.Screen name="forget" component={Forget} /> */}
         <Stack.Screen name="menu" component={Main} />
 
